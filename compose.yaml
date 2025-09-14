@@ -1,5 +1,6 @@
 services:
   web:
+    image: php-teste
     build: .
     ports:
       - "4000:80"
