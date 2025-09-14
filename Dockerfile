@@ -1,12 +1,5 @@
-FROM node:18
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
+FROM php:8-apache
 
 COPY . .
 
-EXPOSE 3000
-
-CMD [ "npm", "run", "dev" ]
+CMD [ "apache2-foreground" ] 
